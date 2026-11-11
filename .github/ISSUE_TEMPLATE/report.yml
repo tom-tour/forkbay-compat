@@ -1,0 +1,97 @@
+name: Game report
+description: How a game runs for you, on which emulator and build. / Comment un jeu tourne chez toi, avec quel émulateur et quelle version.
+title: "[Report] "
+labels: ["report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One report per game and per build. No links to games, keys or firmware: they are deleted.
+        Un rapport par jeu et par version. Aucun lien vers des jeux, des clés ou du firmware : ils sont supprimés.
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      placeholder: Mario Kart World
+    validations:
+      required: true
+  - type: input
+    id: title_id
+    attributes:
+      label: Program id
+      description: Optional. The 16-character id of the game, for example 0400C3F00006E000.
+  - type: input
+    id: game_version
+    attributes:
+      label: Game version
+      placeholder: 1.0.0
+  - type: input
+    id: emulator
+    attributes:
+      label: Emulator
+      placeholder: Eglantine, Lichii, Orchid...
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Emulator build
+      placeholder: v0.1.0-rc3, build-150...
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Result
+      options:
+        - Perfect
+        - Playable
+        - Runs
+        - Loads
+        - Unplayable
+    validations:
+      required: true
+  - type: input
+    id: fps
+    attributes:
+      label: FPS
+      placeholder: 30-40
+  - type: input
+    id: gpu
+    attributes:
+      label: Graphics card
+      placeholder: NVIDIA GeForce RTX 4070
+    validations:
+      required: true
+  - type: input
+    id: cpu
+    attributes:
+      label: Processor
+      placeholder: AMD Ryzen 7 5800X3D
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11
+    validations:
+      required: true
+  - type: input
+    id: settings
+    attributes:
+      label: Settings
+      placeholder: Docked, Vulkan, resolution 1x, GPU accuracy high
+  - type: input
+    id: played
+    attributes:
+      label: Time played
+      placeholder: 45 min
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: What works, what does not, where it slows down.
+  - type: input
+    id: forkbay
+    attributes:
+      label: Sent from
+      description: Filled in by Forkbay. Leave empty when you write the report yourself.

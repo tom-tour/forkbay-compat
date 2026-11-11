@@ -1,0 +1,243 @@
+{
+ "note": "One row per game. ids are the console program ids (the first is the main one); aliases are the other names the sources use. lichii is the game's page on lichii.zortos.me, nxnative the folder of its profile in seedds/nxnative.",
+ "games": [
+  {
+   "ids": [
+    "0400C3F00006E000"
+   ],
+   "name": "Mario Kart World",
+   "aliases": [
+    "MKW"
+   ],
+   "lichii": "mario-kart-world-5483943",
+   "nxnative": "0400C3F00006E000"
+  },
+  {
+   "ids": [
+    "040074A01BF12000"
+   ],
+   "name": "Donkey Kong Bananza",
+   "aliases": [
+    "DKB",
+    "DK Bananza"
+   ],
+   "lichii": "donkey-kong-bananza-5483961",
+   "nxnative": "040074A01BF12000"
+  },
+  {
+   "ids": [
+    "0400486024DEC000"
+   ],
+   "name": "The Legend of Zelda: Ocarina of Time",
+   "aliases": [
+    "Zelda: OoT",
+    "OoT",
+    "Ocarina of Time",
+    "Zelda OoT remake",
+    "Ocarina",
+    "OOTR",
+    "Zelda Ocarina",
+    "Zelda remake",
+    "Green Hat",
+    "Legend of Green"
+   ],
+   "lichii": "the-legend-of-zelda-ocarina-of-time-5532594",
+   "nxnative": "0400486024DEC000"
+  },
+  {
+   "ids": [
+    "0400380020056000"
+   ],
+   "name": "Splatoon Raiders",
+   "aliases": [],
+   "lichii": "splatoon-raiders-5492483",
+   "nxnative": "0400380020056000"
+  },
+  {
+   "ids": [
+    "04007EF01F8AE000"
+   ],
+   "name": "Fire Emblem: Fortune's Weave",
+   "aliases": [
+    "Fire Emblem Fortune's Weave",
+    "Fire Emblem"
+   ],
+   "lichii": "fire-emblem-fortune-s-weave-5501959",
+   "nxnative": "04007EF01F8AE000"
+  },
+  {
+   "ids": [
+    "0400A3A01EE4C000"
+   ],
+   "name": "Pokémon Pokopia",
+   "aliases": [
+    "Pokemon Pokopia",
+    "Pokopia"
+   ],
+   "lichii": "pokemon-pokopia-5503567",
+   "nxnative": "0400A3A01EE4C000"
+  },
+  {
+   "ids": [
+    "040077201BE50000"
+   ],
+   "name": "Kirby Air Riders",
+   "aliases": [],
+   "lichii": "kirby-air-riders-5483963",
+   "nxnative": "040077201BE50000"
+  },
+  {
+   "ids": [
+    "04003F40232DE000"
+   ],
+   "name": "Hyrule Warriors: Age of Imprisonment",
+   "aliases": [
+    "Hyrule Warriors"
+   ],
+   "lichii": "hyrule-warriors-age-of-imprisonment-5483959",
+   "nxnative": "04003F40232DE000"
+  },
+  {
+   "ids": [
+    "0400245021D2C000"
+   ],
+   "name": "Yoshi and the Mysterious Book",
+   "aliases": [],
+   "lichii": "yoshi-and-the-mysterious-book-5510100",
+   "nxnative": "0400245021D2C000"
+  },
+  {
+   "ids": [
+    "0400D4201C6EA000"
+   ],
+   "name": "Mario Tennis Fever",
+   "aliases": [],
+   "lichii": "mario-tennis-fever-5504602",
+   "nxnative": "0400D4201C6EA000"
+  },
+  {
+   "ids": [
+    "0400E88025B1A000"
+   ],
+   "name": "Star Fox",
+   "aliases": [
+    "StarFox"
+   ],
+   "lichii": "star-fox-5529362",
+   "nxnative": "0400E88025B1A000"
+  },
+  {
+   "ids": [
+    "0100F43008C44000"
+   ],
+   "name": "Pokémon Legends: Z-A",
+   "aliases": [
+    "Pokemon Legends Z-A",
+    "Pokémon Legends: Z-A - Nintendo Switch 2 Edition"
+   ],
+   "lichii": "pokemon-legends-z-a-nintendo-switch-2-edition-5483969",
+   "nxnative": "0100F43008C44000"
+  },
+  {
+   "ids": [
+    "010015100B514000"
+   ],
+   "name": "Super Mario Bros. Wonder",
+   "aliases": [
+    "Super Mario Bros. Wonder - Nintendo Switch 2 Edition",
+    "Meetup in Bellabel Park"
+   ],
+   "lichii": "super-mario-bros-wonder-nintendo-switch-2-edition-meetup-in-bellabel-park-5409928",
+   "nxnative": "010015100B514000"
+  },
+  {
+   "ids": [
+    "01007EF00011E000"
+   ],
+   "name": "The Legend of Zelda: Breath of the Wild",
+   "aliases": [
+    "Breath of the Wild",
+    "BotW",
+    "Zelda BotW"
+   ],
+   "lichii": "the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-5483964",
+   "nxnative": "01007EF00011E000"
+  },
+  {
+   "ids": [
+    "0100E95004038000"
+   ],
+   "name": "Xenoblade Chronicles 2",
+   "aliases": [
+    "XenoBlade 2",
+    "Xenoblade 2",
+    "XC2"
+   ],
+   "lichii": "xenoblade-chronicles-2-nintendo-switch-2-edition-5248288",
+   "nxnative": "0100E95004038000"
+  },
+  {
+   "ids": [
+    "010019A01E2F2000"
+   ],
+   "name": "Metroid Prime 4: Beyond",
+   "aliases": [
+    "Metroid Prime 4"
+   ],
+   "lichii": "metroid-prime-4-beyond-nintendo-switch-2-edition-5483968",
+   "nxnative": "010019A01E2F2000"
+  },
+  {
+   "ids": [],
+   "name": "Minecraft",
+   "aliases": [],
+   "lichii": "minecraft-38365"
+  },
+  {
+   "ids": [
+    "040004F027560000"
+   ],
+   "name": "Orbitals",
+   "aliases": [],
+   "lichii": "orbitals-5512618"
+  },
+  {
+   "ids": [],
+   "name": "Fast Fusion",
+   "aliases": [],
+   "lichii": "fast-fusion-5492474"
+  },
+  {
+   "ids": [],
+   "name": "PRAGMATA",
+   "aliases": [
+    "Pragmata"
+   ],
+   "lichii": "pragmata-5454532"
+  },
+  {
+   "ids": [],
+   "name": "The Duskbloods",
+   "aliases": [
+    "Duskbloods"
+   ],
+   "lichii": "the-duskbloods-5483960"
+  },
+  {
+   "ids": [],
+   "name": "Super Smash Bros. Ultimate",
+   "aliases": [
+    "Smash Bros",
+    "Smash Bros Ultimate",
+    "Smash"
+   ]
+  },
+  {
+   "ids": [],
+   "name": "Nintendo Switch 2 Welcome Tour",
+   "aliases": [
+    "Welcome Tour"
+   ]
+  }
+ ]
+}
