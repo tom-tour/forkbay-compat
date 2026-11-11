@@ -1,5 +1,5 @@
 'use strict';
-// Forkbay Compat: reads every source live in the visitor's browser, and puts their reports side by side per game.
+// NX2 Compat: reads every source live in the visitor's browser, and puts their reports side by side per game.
 // Nothing from the other sources is stored here: the page only keeps a copy for a few minutes in the browser.
 
 const REPO = 'tom-tour/forkbay-compat';
@@ -20,10 +20,10 @@ const FR = {
   'Eglantine compatibility page': 'Page de compatibilité d\'Eglantine', 'wichforks guide pick': 'Choix du guide wichforks',
   'Also try': 'À essayer aussi', 'Lichii reports': 'Rapports Lichii', 'Native port (nxnative)': 'Portage natif (nxnative)',
   'Open the reports on the Lichii site': 'Voir les rapports sur le site de Lichii',
-  'The Lichii site does not let other pages read its reports yet. Forkbay reads them directly.': 'Le site de Lichii ne laisse pas encore d\'autres pages lire ses rapports. Forkbay, lui, les lit directement.',
+  'The Lichii site does not let other pages read its reports yet. NX2 Launcher reads them directly.': 'Le site de Lichii ne laisse pas encore d\'autres pages lire ses rapports. NX2 Launcher, lui, les lit directement.',
   'Mac, iPhone and iPad: the game runs natively, not in an emulator.': 'Mac, iPhone et iPad : le jeu tourne nativement, pas dans un émulateur.',
   'Open its profile': 'Voir sa fiche', 'All sources': 'Toutes les sources', 'All emulators': 'Tous les émulateurs',
-  'Sent from Forkbay': 'Envoyé depuis Forkbay', 'played': 'joué', 'Open': 'Ouvrir', 'Closed': 'Fermé',
+  'Sent from NX2 Launcher': 'Envoyé depuis NX2 Launcher', 'played': 'joué', 'Open': 'Ouvrir', 'Closed': 'Fermé',
   'Not reachable': 'Injoignable', 'GitHub limits reading to 60 requests per hour: try again later.': 'GitHub limite la lecture à 60 requêtes par heure : réessaie plus tard.',
   'today': 'aujourd\'hui', 'yesterday': 'hier', 'Show more': 'Voir plus', 'Other games': 'Autres jeux',
   'Updated': 'Mis à jour', 'Players (here)': 'Joueurs (ici)', 'Eglantine issues': 'Tickets Eglantine', 'Lichii issues': 'Tickets Lichii',
@@ -107,7 +107,7 @@ const SOURCES = [
         const f = formFields(i.body);
         return { kind: 'report', game: f['game'], text: [f['notes'], f['settings']].filter(Boolean).join(' · '), ids: f['program id'],
           outcome: outcomeOf(f['result']), emulator: f['emulator'], build: f['emulator build'], gpu: f['graphics card'], cpu: f['processor'], os: f['operating system'],
-          fps: f['fps'], played: f['time played'], version: f['game version'], forkbay: /forkbay/i.test(f['sent from'] || ''), date: Date.parse(i.created_at), url: i.html_url };
+          fps: f['fps'], played: f['time played'], version: f['game version'], forkbay: /forkbay|nx2 launcher/i.test(f['sent from'] || ''), date: Date.parse(i.created_at), url: i.html_url };
       });
     },
   },
@@ -240,7 +240,7 @@ function renderSources() {
     const st = STATE[s.id] || { state: 'wait' };
     const tip = st.state === 'err' ? (st.rate ? t('GitHub limits reading to 60 requests per hour: try again later.') : t('Not reachable')) : '';
     return `<a class="src ${st.state}" href="${esc(s.home)}" target="_blank" rel="noopener" title="${esc(tip)}"><i></i>${esc(t(s.name))}${st.state === 'ok' ? ` · ${st.n}` : ''}</a>`;
-  }).join('') + `<span class="src" title="${esc(t('The Lichii site does not let other pages read its reports yet. Forkbay reads them directly.'))}"><i></i>Lichii · <a href="https://lichii.zortos.me/reports" target="_blank" rel="noopener">lichii.zortos.me</a></span>`;
+  }).join('') + `<span class="src" title="${esc(t('The Lichii site does not let other pages read its reports yet. NX2 Launcher reads them directly.'))}"><i></i>Lichii · <a href="https://lichii.zortos.me/reports" target="_blank" rel="noopener">lichii.zortos.me</a></span>`;
 }
 
 const ago = ms => {
@@ -290,7 +290,7 @@ function itemHtml(it) {
   const meta = [it.emulator && it.build ? `${it.emulator} · ${it.build}` : it.emulator || it.build, it.gpu, it.cpu, it.os, it.fps && `${it.fps} FPS`, it.version && `v${it.version}`, it.played && `${t('played')} ${it.played}`].filter(Boolean).map(esc).join(' · ');
   const label = it.outcome ? `<span class="pill o-${esc(it.outcome)}">${esc(t(it.outcome))}</span>` : '';
   const url = safeUrl(it.url);
-  return `<div class="rep"><div class="who"><span class="tag ${it.forkbay ? 'fb' : ''}">${esc(it.forkbay ? t('Sent from Forkbay') : srcName(it.src))}</span>${label}<span class="meta">${esc(ago(it.date))}</span></div><div class="what">${head ? `<p>${head}</p>` : ''}${it.kind === 'issue' && it.text ? `<p class="meta">${esc(clip(it.text, 300))}</p>` : ''}${meta ? `<p class="meta">${meta}</p>` : ''}${url ? `<p class="meta"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(t('Open'))} ↗</a></p>` : ''}</div></div>`;
+  return `<div class="rep"><div class="who"><span class="tag ${it.forkbay ? 'fb' : ''}">${esc(it.forkbay ? t('Sent from NX2 Launcher') : srcName(it.src))}</span>${label}<span class="meta">${esc(ago(it.date))}</span></div><div class="what">${head ? `<p>${head}</p>` : ''}${it.kind === 'issue' && it.text ? `<p class="meta">${esc(clip(it.text, 300))}</p>` : ''}${meta ? `<p class="meta">${meta}</p>` : ''}${url ? `<p class="meta"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(t('Open'))} ↗</a></p>` : ''}</div></div>`;
 }
 
 function renderGame(slug) {
@@ -300,7 +300,7 @@ function renderGame(slug) {
   const facts = [];
   for (const w of s.its.filter(i => i.kind === 'status')) facts.push(`<div class="card"><h2>${esc(t('Eglantine compatibility page'))}</h2><span class="pill o-${esc(w.outcome)}">${esc(t(w.outcome))}</span> <span class="meta">${esc(w.build)}</span><p class="small">${esc(clip(w.text, 360))}</p><p class="meta"><a href="${esc(safeUrl(w.url))}" target="_blank" rel="noopener">${esc(t('Open'))} ↗</a></p></div>`);
   for (const p of s.its.filter(i => i.kind === 'pick')) facts.push(`<div class="card"><h2>${esc(t('wichforks guide pick'))}${p.game !== g.name ? ` <span class="meta">(${esc(p.game)})</span>` : ''}</h2><p><b>${esc(p.pick)}</b></p>${p.also && p.also !== 'None' ? `<p class="small">${esc(t('Also try'))}${LANG === 'fr' ? ' : ' : ': '}${esc(p.also)}</p>` : ''}<p class="meta">${esc(p.text)}</p></div>`);
-  if (g.lichii) facts.push(`<div class="card"><h2>${esc(t('Lichii reports'))}</h2><p class="small muted">${esc(t('The Lichii site does not let other pages read its reports yet. Forkbay reads them directly.'))}</p><p><a class="btn" href="https://lichii.zortos.me/games/${encodeURIComponent(g.lichii)}" target="_blank" rel="noopener">${esc(t('Open the reports on the Lichii site'))} ↗</a></p></div>`);
+  if (g.lichii) facts.push(`<div class="card"><h2>${esc(t('Lichii reports'))}</h2><p class="small muted">${esc(t('The Lichii site does not let other pages read its reports yet. NX2 Launcher reads them directly.'))}</p><p><a class="btn" href="https://lichii.zortos.me/games/${encodeURIComponent(g.lichii)}" target="_blank" rel="noopener">${esc(t('Open the reports on the Lichii site'))} ↗</a></p></div>`);
   for (const n of s.its.filter(i => i.kind === 'native')) facts.push(`<div class="card"><h2>${esc(t('Native port (nxnative)'))}</h2><p class="small muted">${esc(t('Mac, iPhone and iPad: the game runs natively, not in an emulator.'))}</p><p><a href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(t('Open its profile'))} ↗</a></p></div>`);
   let reps = s.its.filter(i => i.kind === 'report').sort((a, b) => (b.date || 0) - (a.date || 0));
   const srcs = [...new Set(reps.map(r => r.src))], emus = [...new Set(reps.map(r => r.emulator).filter(Boolean))].sort();
@@ -325,7 +325,7 @@ function newReportUrl(g) {
   return `https://github.com/${REPO}/issues/new?${p}`;
 }
 
-// Forkbay opens #/find/<program id or ->/<name>: the game page once a source knows the game, the search otherwise.
+// NX2 Launcher opens #/find/<program id or ->/<name>: the game page once a source knows the game, the search otherwise.
 function findRoute() {
   const f = location.hash.match(/^#\/find\/([0-9A-Fa-f]{16}|-)\/(.*)$/);
   if (!f) return;

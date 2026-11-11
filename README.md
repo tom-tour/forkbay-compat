@@ -1,4 +1,4 @@
-# Forkbay Compat
+# NX2 Compat
 
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/tom_t)
 
@@ -6,13 +6,13 @@
 
 *[Version française plus bas](#français)*
 
-Switch 2 emulation moves every day, and the reports are spread across many places. Forkbay Compat puts them side by side, game by game.
+Switch 2 emulation moves every day, and the reports are spread across many places. NX2 Compat puts them side by side, game by game.
 
 ## Sources
 
 | Source | What it gives |
 |---|---|
-| Players, here | Reports sent with the [report form](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml), or from [Forkbay](https://github.com/tom-tour/forkbay) after a game |
+| Players, here | Reports sent with the [report form](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml), or from [NX2 Launcher](https://github.com/tom-tour/nx2-launcher) after a game |
 | [Eglantine](https://github.com/Eglantine-Community/Eglantine) | Its game compatibility page, and its game issues |
 | [Lichii](https://github.com/zortos293/Lichii) | Its game issues, and a link to the [Lichii report site](https://lichii.zortos.me) |
 | [wichforks](https://github.com/riyadhHDA/wichforks) | The guide's pick per game, and the reports it gathered |
@@ -22,7 +22,7 @@ The other sources are read live by the visitor's browser when the page opens, an
 
 ## Send a report
 
-Use the [report form](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml): game, emulator and build, result, graphics card, system. A GitHub account is needed. Forkbay fills the form in for you after a game.
+Use the [report form](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml): game, emulator and build, result, graphics card, system. A GitHub account is needed. NX2 Launcher fills the form in for you after a game.
 
 No links to games, keys or firmware: such reports are deleted.
 
@@ -38,13 +38,13 @@ GPL-3.0-or-later. The reports belong to their authors and to each source.
 
 ## Français
 
-L'émulation Switch 2 bouge tous les jours, et les rapports sont éparpillés. Forkbay Compat les met côte à côte, jeu par jeu.
+L'émulation Switch 2 bouge tous les jours, et les rapports sont éparpillés. NX2 Compat les met côte à côte, jeu par jeu.
 
 ### Sources
 
 | Source | Ce qu'elle apporte |
 |---|---|
-| Les joueurs, ici | Les rapports envoyés avec le [formulaire](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml), ou depuis [Forkbay](https://github.com/tom-tour/forkbay) après une partie |
+| Les joueurs, ici | Les rapports envoyés avec le [formulaire](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml), ou depuis [NX2 Launcher](https://github.com/tom-tour/nx2-launcher) après une partie |
 | [Eglantine](https://github.com/Eglantine-Community/Eglantine) | Sa page de compatibilité et ses tickets par jeu |
 | [Lichii](https://github.com/zortos293/Lichii) | Ses tickets par jeu, et un lien vers le [site de rapports de Lichii](https://lichii.zortos.me) |
 | [wichforks](https://github.com/riyadhHDA/wichforks) | Le choix du guide pour chaque jeu, et les rapports qu'il a réunis |
@@ -54,7 +54,7 @@ Les autres sources sont lues en direct par le navigateur du visiteur à l'ouvert
 
 ### Envoyer un rapport
 
-Remplis le [formulaire](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml) : jeu, émulateur et version, résultat, carte graphique, système. Il faut un compte GitHub. Forkbay remplit le formulaire pour toi après une partie.
+Remplis le [formulaire](https://github.com/tom-tour/forkbay-compat/issues/new?template=report.yml) : jeu, émulateur et version, résultat, carte graphique, système. Il faut un compte GitHub. NX2 Launcher remplit le formulaire pour toi après une partie.
 
 Aucun lien vers des jeux, des clés ou du firmware : ces rapports sont supprimés.
 

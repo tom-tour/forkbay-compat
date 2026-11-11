@@ -94,4 +94,4 @@ body:
     id: forkbay
     attributes:
       label: Sent from
-      description: Filled in by Forkbay. Leave empty when you write the report yourself.
+      description: Filled in by NX2 Launcher. Leave empty when you write the report yourself.
