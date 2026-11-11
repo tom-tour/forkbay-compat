@@ -325,7 +325,20 @@ function newReportUrl(g) {
   return `https://github.com/${REPO}/issues/new?${p}`;
 }
 
+// Forkbay opens #/find/<program id or ->/<name>: the game page once a source knows the game, the search otherwise.
+function findRoute() {
+  const f = location.hash.match(/^#\/find\/([0-9A-Fa-f]{16}|-)\/(.*)$/);
+  if (!f) return;
+  let name = '';
+  try { name = decodeURIComponent(f[2]); } catch (e) { name = f[2]; }
+  const id = f[1] === '-' ? '' : f[1].toUpperCase();
+  const g = (id && GAMES.find(x => (x.ids || []).includes(id))) || findGame(name);
+  if (g) { history.replaceState(null, '', '#/game/' + g.slug); return; }
+  if (!Object.values(STATE).some(s => s.state === 'wait') && GAMES.length) { Q = name; history.replaceState(null, '', '#/'); }
+}
+
 function route() {
+  findRoute();
   const m = location.hash.match(/^#\/game\/([a-z0-9-]+)$/);
   const focus = document.activeElement && document.activeElement.id === 'q';
   $('view').innerHTML = m ? renderGame(m[1]) : renderList();
